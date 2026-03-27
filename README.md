@@ -4,7 +4,7 @@ A *PHP* + *MySQL* web application built for a Web Development in Unix course. Th
 
 ---
 
-##Project Summary##
+## Project Summary ##
 
 This application was designed as a hockey-themed tournament registration system with both front-end and back-end functionality. The project combines:
 - user account creation and login
@@ -19,7 +19,7 @@ The goal of the project was to demonstrate practical full-stack web development 
 
 ---
 
-##Features##
+## Features ##
 - **User Registration:** New users can create an account.
 - **User Login / Logout:** Existing users can authenticate and manage a session.
 - **Dashboard:** Displays a hockey-themed landing page and a sample tournament schedule.
@@ -30,7 +30,7 @@ The goal of the project was to demonstrate practical full-stack web development 
 
 ---
 
-##Tech Stack##
+## Tech Stack ##
 - **Backend:** PHP
 - **Database:** MySQL
 - **Frontend:** HTML, CSS
@@ -39,7 +39,7 @@ The goal of the project was to demonstrate practical full-stack web development 
 
 ---
 
-##File Structure##
+## File Structure ##
 ```text
 hockey-tournament-registration-system/
 ├── dashboard.php
@@ -51,7 +51,7 @@ hockey-tournament-registration-system/
 ├── schema.sql
 └── README.md
 ```
-##Database Design##
+## Database Design ##
 ###The database uses three main tables:###
 `users`
 **Stores account information for each user.**
@@ -78,8 +78,8 @@ hockey-tournament-registration-system/
 
 ---
 
-##Security Concepts Used##
-###Password Hashing###
+## Security Concepts Used ##
+### Password Hashing ###
 Passwords are not stored in plain text. During registration, the password is hashed using:
 ```php
 password_hash($password, PASSWORD_DEFAULT)
@@ -89,14 +89,14 @@ During login, the submitted password is verified against the stored hash using:
 password_verify($password, $user['password_hash'])
 ```
 This follows secure PHP authentication practices and helps protect user credentials if the database is exposed.
-###Session-Based Authentication###
+### Session-Based Authentication ###
 The application relies on PHP sessions through a separate `auth.php` helper file (referenced in the uploaded code). After login, user information is stored in the session so protected pages can verify that the user is authenticated.
-###User-Specific Data Access###
+###U ser-Specific Data Access ###
 When teams are retrieved, the query filters results by the logged-in user's ID. This ensures that users only see teams they created.
 
 ---
 
-##How the Application Works##
+## How the Application Works ##
 **1. Account Creation**
 A new user fills out the registration form in `register.php`. The application validates the input, checks whether the username already exists, hashes the password, and inserts the new account into the database.
 **2. Login**
@@ -110,7 +110,7 @@ The same page also allows users to select one of their teams and add players to 
 
 ---
 
-##Reconstructed Setup Steps##
+## Reconstructed Setup Steps ##
 *The exact classroom setup steps were not documented at the time, so the following process is reconstructed from the source code and typical Unix web development workflow using AI.*
 1. Install / use a local web development environment
 Use a Unix-compatible environment with:
@@ -153,7 +153,7 @@ Open the project in a browser through your local web server and test:
 
 --- 
 
-##What I Learned##
+## What I Learned ##
 This project helped reinforce important web development concepts, including:
 - building multi-page PHP applications
 - connecting PHP to MySQL with PDO
