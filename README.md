@@ -52,7 +52,7 @@ hockey-tournament-registration-system/
 └── README.md
 ```
 ## Database Design ##
-###The database uses three main tables:###
+### The database uses three main tables: ###
 `users`
 **Stores account information for each user.**
 `id` - primary key
