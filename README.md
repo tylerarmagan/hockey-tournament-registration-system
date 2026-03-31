@@ -128,6 +128,7 @@ Import the schema:
 mysql -u root -p < schema.sql
 ```
 This creates the `hockey_tournament` database and the required `users`, `teams`, and `players` tables.
+
 4. Configure database credentials
 Update `db_connect.php` with the correct MySQL credentials:
 ```php
